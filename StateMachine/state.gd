@@ -10,8 +10,8 @@ func Enter() -> void:
 func Exit() -> void:
 	pass
 
-func Process(_delta) -> void:
-	pass
+func Process(_delta) -> State:
+	return null
 
-func Physics(_delta) -> void:
-	pass
+func Physics(_delta) -> State:
+	return null
