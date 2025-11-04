@@ -3,12 +3,19 @@ class_name Entity extends CharacterBody2D
 var cardinal_direction : Vector2 = Vector2.DOWN
 var direction : Vector2 = Vector2.ZERO
 
+@export var hp : int = 6
+@export var max_hp : int = 6
+
 @onready var animation_player = $AnimationPlayer
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var state_machine: StateMachine = $StateMachine
+@onready var hurt_box: HurtBox = $HurtBox
+
+var invulnerable = false
 
 func _ready():
 	state_machine.Initialize(self)
+	hurt_box.initialize(self)
 	pass
 
 func _process(_delta):
@@ -16,6 +23,14 @@ func _process(_delta):
 
 func _physics_process(_delta):
 	move_and_slide()
+
+func take_damage(damage : int) -> void:
+	if not invulnerable:
+		hp -= clampi(hp - damage, 0, max_hp)
+		print(hp)
+		invulnerable = true
+	await get_tree().create_timer(0.5).timeout
+	invulnerable = false
 
 func update_animation(state: String) -> void:
 	animation_player.play(state + "_" + anim_direction())
@@ -50,4 +65,4 @@ func update_input_direction() -> void:
 		direction = Vector2(
 			Input.get_axis("left", "right"),
 			Input.get_axis("up", "down")
-		)
+		).normalized()
