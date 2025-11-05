@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dtbia4xy1sayn"
-path="res://.godot/imported/Run_Side-Sheet.png-cfccc301f16a84a62c37016d618beb8d.ctex"
+uid="uid://bplgek13yc8ly"
+path="res://.godot/imported/Slime.png-828ea1266d07d0caa71432f306191d75.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Entities/Player/Sprites/Animations/Run_Base/Run_Side-Sheet.png"
-dest_files=["res://.godot/imported/Run_Side-Sheet.png-cfccc301f16a84a62c37016d618beb8d.ctex"]
+source_file="res://Entities/Enemies/Slime/Sprites/Slime.png"
+dest_files=["res://.godot/imported/Slime.png-828ea1266d07d0caa71432f306191d75.ctex"]
 
 [params]
 

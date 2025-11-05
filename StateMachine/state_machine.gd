@@ -15,6 +15,8 @@ func Initialize(_entity : Entity) -> void:
 	if states.size() > 0:
 		for s in states:
 			s.entity = _entity
+			s.state_machine = self
+			s.Initialize()
 		ChangeState( states[0])
 		process_mode = Node.PROCESS_MODE_INHERIT
 

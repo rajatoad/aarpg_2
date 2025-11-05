@@ -1,6 +1,9 @@
 class_name State extends Node
 
 var entity: Entity
+var state_machine : StateMachine
+@export var next_state : State
+
 
 func _ready():
 	pass
