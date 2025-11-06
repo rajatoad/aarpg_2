@@ -3,7 +3,7 @@ class_name AttackState extends State
 #@export var next_state : State = null
 @export var anim_name = "attack"
 @export_range(1,20,0.5) var decelerate_speed : float = 5.0
-@onready var hurt_box: HurtBox = $"../../HurtBox"
+@onready var hurt_box: HurtBox = %HurtBox
 
 @onready var idle: IdleState = $"../Idle"
 @onready var walk: WalkState = $"../Walk"

@@ -605,6 +605,7 @@ texture = ExtResource("2_4ntmi")
 hframes = 4
 
 [node name="HurtBox" parent="Sprite2D" instance=ExtResource("13_dkpta")]
+unique_name_in_owner = true
 position = Vector2(0, 3)
 collision_mask = 256
 monitoring = false
